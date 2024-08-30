@@ -1,0 +1,38 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.txt-shadow {
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.photo-holder {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.photo-holder-h300 {
+    overflow: hidden;
+    border-radius: 5px;
+    max-height: 225px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.photo-h300 {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.h4-bold {
+    font-size: 1.75rem;
+    font-weight: 600px;
+}
