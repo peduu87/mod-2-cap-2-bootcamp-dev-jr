@@ -36,3 +36,51 @@ body {
     font-size: 1.75rem;
     font-weight: 600px;
 }
+
+.quantity {
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: transparent;
+    width: 100px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 45px;
+}
+
+.qty {
+    font-size: 1.2rem;
+    border: none;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: #000000;
+}
+
+.qty:focus {
+    outline: none;
+}
+
+.qty::-webkit-inner-spin-button, 
+.qty::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.minus, .plus {
+    height: 100%;
+    width: 50px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    padding: 0px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #198754;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.minus:hover, .plus:hover {
+    background-color: #277450;
+}
