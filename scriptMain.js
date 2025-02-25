@@ -63,10 +63,10 @@ String.prototype.getDecimals || (String.prototype.getDecimals = function () {
 //#endregion
 
 function justTesting() {
-    window.alert("Desculpe-me! Isto é apenas um teste! 😅\nTalvez um dia eu abra esse restaurante...");
+    window.alert("Desculpe-me! Isto é apenas um teste! 😅\nTalvez um dia eu abra um restaurante... quem sabe!");
 }
 
-var prods = [
+const prods = [
     {id: 11, name: "The Burger", price: 24.9},
     {id: 12, name: "The Bacon", price: 27.9},
     {id: 13, name: "The Chicken", price: 23.9},
@@ -77,3 +77,11 @@ var prods = [
     {id: 32, name: "Torta Silvestre", price: 11.9},
     {id: 33, name: "Trufas de Chocolate", price: 11.9},
 ];
+
+function printOrder() {
+    var qtyElements = document.getElementsByClassName("qty")
+
+    for (var el in qtyElements) {
+        console.log("el");
+    }
+}
