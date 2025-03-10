@@ -233,8 +233,8 @@
             </div>
         </div>
         <div class="d-grid mt-5">
-            <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
-                data-bs-target="#orderModal">Pedir!</button>
+            <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#orderModal"
+                onclick="printOrder()">Pedir!</button>
         </div>
     </div>
 
@@ -245,12 +245,12 @@
                     <h1 class="modal-title fs-5" id="orderModalLabel">Confirmar pedido?</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="orderOutput">
                     ...
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Voltar</button>
-                    <button type="button" class="btn btn-success" onclick="printOrder()">Confirmar</button>
+                    <button type="button" class="btn btn-success" onclick="justTesting()">Confirmar</button>
                 </div>
             </div>
         </div>

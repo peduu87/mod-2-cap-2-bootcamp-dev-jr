@@ -78,12 +78,34 @@ const prods = [
     {id: 33, name: "Trufas de Chocolate", price: 11.9},
 ];
 
+var currencyFormatter = new Intl.NumberFormat('pt-BR', {
+    style: 'currency', currency: 'BRL'
+});
+
 function printOrder() {
-    const qtyElements = document.getElementsByName("quantity")
+    const qtyElements = document.getElementsByName("quantity");
+    const orderOutput = document.getElementById("orderOutput")
 
-    let orderString = "";
+    let orderSummary = "";
+    let total = 0;
 
-    for (const el of qtyElements) {
-        console.log(el.value);
+    for (const qty of qtyElements) {
+        if (qty.value > 0) {
+            if (orderSummary.length > 1) {
+                orderSummary += "<br>\n";
+            }
+
+            const prod = prods[qty.id - 1];
+
+            orderSummary += `<h5>${prod.id} - ${prod.name} ${qty.value}x ${currencyFormatter.format(prod.price)}</h5> (${currencyFormatter.format(prod.price * qty.value)})`;
+
+            total += prod.price * qty.value;
+        }
     }
+
+    console.log(orderSummary);
+    console.log(total)
+
+    orderOutput.innerHTML = orderSummary;
+    orderOutput.innerHTML += `<br><br><h4>Total: ${currencyFormatter.format(total)}`
 }
