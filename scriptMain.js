@@ -79,9 +79,11 @@ const prods = [
 ];
 
 function printOrder() {
-    var qtyElements = document.getElementsByClassName("qty")
+    const qtyElements = document.getElementsByName("quantity")
 
-    for (var el in qtyElements) {
-        console.log("el");
+    let orderString = "";
+
+    for (const el of qtyElements) {
+        console.log(el.value);
     }
 }
